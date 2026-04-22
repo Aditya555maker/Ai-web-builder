@@ -22,6 +22,11 @@ export default async function handler(req, res) {
     );
 
     const data = await response.json();
+
+    if (!data.candidates || !data.candidates[0]) {
+      return res.status(500).json({ error: data.error?.message || "Gemini response empty" });
+    }
+
     let html = data.candidates[0].content.parts[0].text
       .replace(/^```html\s*/i, "")
       .replace(/^```\s*/i, "")
