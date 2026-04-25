@@ -346,7 +346,7 @@ export default function Home() {
     </div>
   );
 }
-
+ 
 const wrap = {minHeight:"100vh",background:"#08080f",color:"#fff",fontFamily:"sans-serif",display:"flex",alignItems:"center",justifyContent:"center",padding:"20px"};
 const card = {width:"100%",maxWidth:"560px",background:"#0e0e1c",border:"1px solid #1e1e35",borderRadius:"16px",padding:"28px"};
 const heading = {fontSize:"1.4rem",fontWeight:"800",marginBottom:"20px"};
