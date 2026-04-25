@@ -353,3 +353,6 @@ const heading = {fontSize:"1.4rem",fontWeight:"800",marginBottom:"20px"};
 const progress = {fontSize:"12px",color:"#7c3aed",fontFamily:"monospace",marginBottom:"8px",letterSpacing:"1px"};
 const optBox = {padding:"12px",borderRadius:"10px",cursor:"pointer",transition:"all 0.15s"};
 const nextBtn = {flex:1,padding:"13px",background:"linear-gradient(135deg,#7c3aed,#2563eb)",border:"none",borderRadius:"10px",color:"#fff",fontSize
+const backBtn = {padding:"13px 20px",background:"#1a1a2e",border:"1px solid #333",borderRadius:"10px",color:"#888",fontSize:"15px",cursor:"pointer"};
+const lbl = {display:"block",fontSize:"12px",color:"#555",fontFamily:"monospace",marginBottom:"6px",letterSpacing:"1px"};
+const input = {width:"100%",background:"#08080f",border:"2px solid #1e1e35",borderRadius:"10px",color:"#fff",fontSize:"14px",padding:"12px",outline:"none",marginBottom:"16px"};
