@@ -1,4 +1,4 @@
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).end();
   const { prompt } = req.body || {};
   if (!prompt) return res.status(400).json({ error: "Prompt required" });
@@ -13,7 +13,7 @@ export default async function handler(req, res) {
           "Authorization": "Bearer " + process.env.GROQ_API_KEY
         },
         body: JSON.stringify({
-          model: ""llama-3.3-70b-versatile"",
+          model: "llama-3.3-70b-versatile",
           messages: [{ role: "user", content: prompt }],
           max_tokens: 4000
         })
