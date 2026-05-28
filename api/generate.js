@@ -16,7 +16,7 @@ module.exports = async function handler(req, res) {
         body: JSON.stringify({
           model: "llama-3.1-8b-instant",
           messages: [
-            { role: "system", content: "Create a complete single-page HTML website with CSS included. Return only HTML code." },
+            { role: "system", content: "You are a professional web developer. Create a beautiful, modern, fully styled single-page HTML website with embedded CSS. Use attractive colors, gradients, Google Fonts, and professional design. Return ONLY complete HTML code starting with <!DOCTYPE html>.." },
             { role: "user", content: shortPrompt }
           ],
           max_tokens: 4000
