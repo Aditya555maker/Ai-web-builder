@@ -4,7 +4,7 @@ module.exports = async function handler(req, res) {
   if (!prompt) return res.status(400).json({ error: "Prompt required" });
   if (!process.env.GROQ_API_KEY) return res.status(500).json({ error: "API key missing!" });
   try {
-    const shortPrompt = prompt.slice(0, 1000);
+    const shortPrompt = prompt.slice(0, 2000);
     const response = await fetch(
       "https://api.groq.com/openai/v1/chat/completions",
       {
@@ -16,7 +16,7 @@ module.exports = async function handler(req, res) {
         body: JSON.stringify({
           model: "llama-3.1-8b-instant",
           messages: [
-            { role: "system", content: "You are a professional web developer. Create a beautiful, modern, fully styled single-page HTML website with embedded CSS. Use attractive colors, gradients, Google Fonts, and professional design. Return ONLY complete HTML code starting with <!DOCTYPE html>.." },
+            { role: "system", content: "You are a web developer. Return ONLY a complete HTML file starting with <!DOCTYPE html>. No CSS-only, no explanation, no markdown. Full working HTML with embedded CSS and JS.>.." },
             { role: "user", content: shortPrompt }
           ],
           max_tokens: 4000
